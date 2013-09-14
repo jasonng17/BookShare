@@ -1,0 +1,51 @@
+<h1> Search Catalog</h1>
+
+<p>Enter your search </p>
+
+<!-- form_tag used because no need to save inputs to DB -->
+
+  <%= form_tag catalog_index_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>      <!-- passing search param back into the text_field  -->
+        <%= submit_tag "Search", :title => nil %>           <!-- removing the submit_tag "string" from the URL -->
+
+      </p>
+
+    <h1>Here are your search result</h1>
+
+    <table>
+      <% @search_result.each do |book| %>
+
+            <td>
+              <%= image_tag(book.image_url, class: 'list_image') %>
+            </td>
+
+            <td class="list_description">
+              <dl>
+                <dt><%= book.title %></dt>
+                <dd><%= book.description%></dd>
+                <dd><%= book.user_id%></dd>
+              </dl>
+            </td>
+
+            <td class="list_actions">
+              <%= link_to 'Show book details', user_book_path(book.user_id, book.id) %><br/>
+            </td>
+
+            <td class="button">
+                <%= button_to 'Add to Cart', line_items_path(:id => book.id), remote: true%><br/>  <!--send an AJAX request to line_item#CREATE -->
+            </td>
+
+          </tr>
+      <% end %>
+    </table>
+
+    <br>
+
+
+    <%= render 'carts/cart' %>    <!--render cart partial in cart controller-->
+
+    <%= link_to 'Homepage', pages_home_path %>
+
+
+<%end%>

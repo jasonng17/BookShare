@@ -1,0 +1,24 @@
+<h1>Your Cart</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Book Title</th>
+        <th>Owner of Book</th>
+        <th>Book Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @cart.line_items.each do |item| %>
+    <tr>
+        <td><%= item.book.title %></td>
+        <td><%= item.book.user.name %></td>
+        <td><%= item.book.description %></td>
+    </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<%= button_to 'Empty Cart',@cart, method: :delete,
+    data: {confirm: 'Are you sure you want to empty cart?'}%>

@@ -1,0 +1,18 @@
+<h1>Welcome to BookShare</h1>
+<p>Please Login<p>
+
+<!--posts_path helper tells Rails to point the form to the URI
+ associated with seesion#create-->
+
+<%= form_for :post, url: session_path  do |f| %>
+    <p>
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </p>
+    <p class="button"><%= f.submit "Sign In" %></p>
+
+<% end %>
