@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Welcome to BookShare</h1>
+<p>Instructions</p>
+<p>POST - post a new book</p>
+<p>DISPLAY - display your books</p>
+<p>SEARCH - search for a book you want</p>
+<p>FRIENDS - List of BookSharers just like you!</p>
+
+<%= link_to 'POST', new_user_book_path(@user) %>
+<%= link_to 'DISPLAY', user_books_path(@user)  %>
+<%= link_to 'SEARCH', catalog_index_path %>
+<%= link_to 'FRIENDS', users_path %>

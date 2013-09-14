@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130905221418) do
+ActiveRecord::Schema.define(version: 20130911024933) do
 
   create_table "books", force: true do |t|
     t.string   "title"
@@ -19,7 +19,28 @@ ActiveRecord::Schema.define(version: 20130905221418) do
     t.integer  "isbn"
     t.string   "publisher"
     t.string   "description"
-    t.string   "string"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "image_url"
+    t.string   "availability"
+  end
+
+  add_index "books", ["user_id"], name: "index_books_on_user_id"
+
+  create_table "carts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "catalogs", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "line_items", force: true do |t|
+    t.integer  "book_id"
+    t.integer  "cart_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,6 +53,9 @@ ActiveRecord::Schema.define(version: 20130905221418) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password"
+    t.string   "password_digest"
+    t.string   "password_confirmation"
   end
 
 end

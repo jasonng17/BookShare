@@ -1,12 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  title: MyString
-  author: MyString
-  isbn: 1
-  publisher: MyString
-  description: MyString
-  string: MyString
+codebook:
+  title: Dreaming in code
+  author: Scott Rosenburg
+  isbn: 12345
+  publisher: Three River Press
+  description: Story about coding
+  image_url: code.jpg
 
 two:
   title: MyString

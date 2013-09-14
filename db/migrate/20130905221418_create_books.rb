@@ -8,6 +8,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :description
       t.string :string
 
+
       t.timestamps
     end
   end

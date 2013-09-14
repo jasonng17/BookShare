@@ -1,5 +1,7 @@
 require 'test_helper'
 
+fixtures :books
+
 class BooksControllerTest < ActionController::TestCase
   setup do
     @book = books(:one)

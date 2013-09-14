@@ -1,7 +1,5 @@
 class PagesController < ApplicationController
   def home
-  end
-
-  def contact
+    @user = User.find(session[:user_id])
   end
 end
