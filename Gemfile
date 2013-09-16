@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 group :development, :test do
 	gem 'rspec', '~> 1.3.0'
 	gem 'rspec-rails', '~> 1.3.2'
+	gem 'sqlite3'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

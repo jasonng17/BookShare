@@ -1,15 +1,9 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
 one:
-  name: MyString
-  school: MyString
-  department: MyString
-  contact: 1
-  email: MyString
+  name: Nick
+  school: CMU
+  department: INI
+  contact: 4125556666
+  email: nick@andrew.cmu.edu
 
-two:
-  name: MyString
-  school: MyString
-  department: MyString
-  contact: 1
-  email: MyString
+
+

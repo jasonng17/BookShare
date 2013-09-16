@@ -1,17 +1,9 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-codebook:
+one:
   title: Dreaming in code
   author: Scott Rosenburg
   isbn: 12345
   publisher: Three River Press
   description: Story about coding
   image_url: code.jpg
+  user: one
 
-two:
-  title: MyString
-  author: MyString
-  isbn: 1
-  publisher: MyString
-  description: MyString
-  string: MyString
